@@ -75,7 +75,9 @@ if __name__ == '__main__':
         'D:/Project/FYP/Final-Chatbot/sberttest/data/greeting.csv',
         'D:/Project/FYP/Final-Chatbot/sberttest/data/incomplete_questions.csv',
         'D:/Project/FYP/Final-Chatbot/sberttest/data/university_about.csv',
-        'D:/Project/FYP/Final-Chatbot/sberttest/data/university_qa.csv'
+        'D:/Project/FYP/Final-Chatbot/sberttest/data/more_about_faculty.csv',
+        'D:/Project/FYP/Final-Chatbot/sberttest/data/university_qa.csv',
+        'D:/Project/FYP/Final-Chatbot/sberttest/data/developed_by.csv'
     ]
 
     # Train and save the model

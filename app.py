@@ -49,13 +49,16 @@ def query_vector_db(query, index, questions, answers, top_n=1, confidence_thresh
 
 # Handle inappropriate queries
 def handle_inappropriate_query(query):
-    inappropriate_words = ["fuck", "shit", "bitch", "asshole", "ass hole", "ass wipe", "motherfucker"]
+    inappropriate_words = ["fuck", "shit", "bitch", "asshole", "ass hole", "ass wipe", "motherfucker", "mf", "bharway", "bharwa", "gandu", "dalla", "randi", "bharwi", "mc", "madar chod", "bhen k loray", "lora"]
     if any(word in query.lower() for word in inappropriate_words):
         return "Please use appropriate language."
     return None
 
 # Load the model once when the app starts
 index, questions, answers = load_model()
+@app.route('/', methods=["GET"])
+def welcome():
+    return jsonify({'response':"Hello Chatbot Loaded"})
 
 # API route for querying the chatbot
 @app.route('/chat', methods=['POST'])
@@ -73,4 +76,5 @@ def chat():
 
 # Run the Flask application
 if __name__ == '__main__':
-    app.run(debug=True)
+    # app.run(debug=True)
+        app.run(host='0.0.0.0', port=5000, debug=True)
